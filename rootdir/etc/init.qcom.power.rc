@@ -7,6 +7,7 @@ on boot
     chown system system /dev/cpuset/camera-daemon
     chown system system /dev/cpuset/camera-daemon/tasks
     chmod 0664 /dev/cpuset/camera-daemon/tasks
+    write /proc/sys/kernel/sched_boost 1
 
     # update foreground cpuset now that processors are up
     # reserve CPU 3 for the top app and camera daemon
