@@ -41,3 +41,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model
 
 TARGET_VENDOR := oneplus
+
+## USE V4A
+WITH_V4A := true
+
+WITH_SU := true
