@@ -340,4 +340,7 @@
     
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
     <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
+
+    <bool name="config_button_brightness_support">true</bool>
+    <integer name="config_button_brightness_default">128</integer>
 </resources>
