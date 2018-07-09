@@ -125,6 +125,10 @@ PRODUCT_PACKAGES += \
     sensors.hal.tof \
     Snap
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl
