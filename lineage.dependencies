@@ -4,8 +4,8 @@
     "target_path": "device/oppo/common"
   },
   {
+    "remote": "sdhz150",
     "repository": "sdhz152/android_kernel_oneplus_msm8994",
     "target_path": "kernel/oneplus/msm8994"
-    "branch": "lineage-17.1"
   }
 ]
