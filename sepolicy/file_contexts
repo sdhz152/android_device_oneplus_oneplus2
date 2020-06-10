@@ -1,3 +1,6 @@
+# Root files
+/bt_firmware(/.*)?                                                      u:object_r:bt_firmware_file:s0
+
 # We have a couple of non-standard NV partitions
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/oem_dycnvbk          u:object_r:modem_efs_partition_device:s0
 /dev/block/platform/soc\.0/f9824900\.sdhci/by-name/oem_stanvbk          u:object_r:modem_efs_partition_device:s0
@@ -24,6 +27,10 @@
 /sys/devices/soc\.0/fdb00000\.qcom,kgsl-3d0/devfreq/fdb00000\.qcom,kgsl-3d0/governor u:object_r:sysfs_thermal:s0
 /sys/devices/soc\.0/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/default_pwrlevel           u:object_r:sysfs_thermal:s0
 /sys/devices/soc\.0/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk    u:object_r:sysfs_thermal:s0
+
+# cgroup
+/dev/cpuset(/.*)?                                                       u:object_r:cgroup:s0
+/dev/stune(/.*)?                                                        u:object_r:cgroup:s0
 
 # Fingerprint
 /sys/devices/soc\.0/f9968000\.spi/spi_master/spi12/spi12\.0(/.*)?       u:object_r:sysfs_fingerprint:s0
@@ -53,6 +60,10 @@
 # RIL
 /data/oemnvitems(/.*)?                                                  u:object_r:radio_data_file:s0
 /sys/devices/soc\.0/6200000\.qcom,nvbackup_sharedmem/uio/uio4(/.*)?     u:object_r:sysfs_nv:s0
+
+# TimeKeep
+/sys/devices/soc\.0/qpnp-rtc-8/rtc/rtc0(/.*)?                           u:object_r:sysfs_rtc:s0
+/(system/vendor|vendor)/bin/timekeep                                    u:object_r:timekeep_exec:s0
 
 # Touch features
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.oneplus2     u:object_r:hal_lineage_touch_default_exec:s0
