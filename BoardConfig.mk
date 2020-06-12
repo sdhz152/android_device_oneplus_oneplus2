@@ -60,7 +60,9 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8994
-TARGET_KERNEL_CONFIG := oneplus2_defconfig
+TARGET_KERNEL_CONFIG := nogravity_defconfig
+# Toolchain: https://github.com/Pierre2324/aarch64-linux-android-4.9-uber-master
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := /home/sdhz150/android/nh/aarch64-linux-android-4.9-uber-master/bin/aarch64-linux-android-
 
 # Audio
 AUDIO_FEATURE_ENABLED_ACDB_LICENSE := true
